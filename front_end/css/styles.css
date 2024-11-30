@@ -1,0 +1,26 @@
+ul{
+    list-style-type: none;
+}
+
+.category-item.active {
+    padding-left: 5px;
+}
+
+li.active > .category-item {
+    background-color:black;
+    color: white;
+    border-left: blue 5px solid;
+}
+.category-filter {
+    height: 100vh;
+    overflow-y: auto;
+    padding: 1rem;
+    background-color: #f8f9fa;
+}
+.card-img-top {
+    height: 150px; 
+    object-fit: cover; 
+}
+.card {
+    margin-bottom: 1rem;
+}

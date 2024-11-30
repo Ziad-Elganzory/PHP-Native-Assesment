@@ -1,0 +1,16 @@
+{
+    "name": "ganzury/api",
+    "autoload": {
+        "psr-4": {
+            "Src\\": "src/",
+            "App\\": "app/"
+        }
+    },
+    "authors": [
+        {
+            "name": "ziad.elganzory",
+            "email": "ziad.m.elganzory@gmail.com"
+        }
+    ],
+    "require": {}
+}
