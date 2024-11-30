@@ -30,19 +30,7 @@
 docker-compose up --build
 ```
 
-## Hosts:
-API host: http://api.cc.localhost
 
-DB host: http://db.cc.localhost
-
-Front host: http://cc.localhost
-
-Traefik dashboard: http://127.0.0.1:8080/dashboard/#/
-
-
-DB credentials - look at the docker-compose.yml
-
-Api docs are in swagger.yml
 
 -----------------------------------------------------------------------
 ## Key Changes:
@@ -63,5 +51,19 @@ Api docs are in swagger.yml
 3. Get All Categories ``` http://api.cc.localhost/categories ```
 
 4. Get Category By uuid ``` http://api.cc.localhost/categories/${uuid} ```
+
+## Hosts:
+API host: http://api.cc.localhost
+
+DB host: http://db.cc.localhost
+
+Front host: http://cc.localhost
+
+Traefik dashboard: http://127.0.0.1:8080/dashboard/#/
+
+
+DB credentials - look at the docker-compose.yml and use it in .env
+
+Api docs are in swagger.yml
 
 
