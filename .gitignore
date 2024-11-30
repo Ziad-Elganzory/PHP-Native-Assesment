@@ -1,0 +1,4 @@
+.idea
+database/volume
+api/vendor
+api/.env
