@@ -1,9 +1,9 @@
 <?php
 
-require_once __DIR__ . '/vendor/autoload.php';
-require_once __DIR__ . '/src/Helpers/LoadEnv.php';
+require_once __DIR__ . '/api/vendor/autoload.php';
+require_once __DIR__ . '/api/src/Helpers/LoadEnv.php';
 
-load_env(__DIR__ . '/.env');
+load_env(__DIR__ . '/api/.env');
 
 use Src\Config\DatabaseConn;
 $conn = new DatabaseConn();
@@ -22,7 +22,7 @@ if (!isset($options['json']) || !isset($options['table'])) {
 }
 
 $jsonFile = $options['json'];
-$tableName = $options['tables'];
+$tableName = $options['table'];
 
 if (!file_exists($jsonFile)) {
     die("File not found: $jsonFile\n");
@@ -54,9 +54,10 @@ if (isset($dataArray[0][$tableName]) && is_array($dataArray[0][$tableName])) {
             echo "Error inserting category: " . $mysqli->error . "\n";
         }
 
-        $mysqli->close();
     }
 } else {
     echo "No valid categories data found or table name is incorrect. Expected 'categories' data.\n";
 }
+$mysqli->close();
+
 ?>
